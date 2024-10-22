@@ -1,0 +1,49 @@
+CREATE TABLE dbo.Clientes (
+    ClienteID INT PRIMARY KEY IDENTITY(1,1),
+    Nombre NVARCHAR(100) NOT NULL,
+    Apellido NVARCHAR(100) NOT NULL,
+    Correo NVARCHAR(150),
+    Telefono NVARCHAR(20),
+    Direccion NVARCHAR(200),
+    FechaRegistro DATE NOT NULL DEFAULT GETDATE()
+);
+
+CREATE TABLE dbo.Productos (
+    ProductoID INT PRIMARY KEY IDENTITY(1,1),
+    Nombre NVARCHAR(100) NOT NULL,
+    Tipo NVARCHAR(50), -- Ejemplo: Cerveza, Vino, Whisky, Vodka
+    Precio DECIMAL(10,2) NOT NULL,
+    CantidadEnStock INT NOT NULL, -- Cantidad en stock
+    Proveedor NVARCHAR(100), -- Nombre del proveedor del producto
+    FechaIngreso DATE NOT NULL DEFAULT GETDATE(), -- Fecha de ingreso del producto al inventario
+    Imagen NVARCHAR(MAX) -- URL o ruta de la imagen del producto
+);
+
+CREATE TABLE dbo.Factura (
+    FacturaID INT PRIMARY KEY IDENTITY(1,1),
+    ClienteID INT NOT NULL,
+    FechaCompra DATE NOT NULL DEFAULT GETDATE(),
+    Total DECIMAL(10,2) NOT NULL,
+    FOREIGN KEY (ClienteID) REFERENCES dbo.Clientes(ClienteID)
+);
+
+
+CREATE TABLE dbo.Carrito (
+    CarritoID INT PRIMARY KEY IDENTITY(1,1),
+    ClienteID INT NOT NULL,
+    ProductoID INT NOT NULL,
+    Cantidad INT NOT NULL,
+    Subtotal DECIMAL(10,2) AS (Cantidad * (SELECT Precio FROM dbo.Productos WHERE ProductoID = Carrito.ProductoID)) PERSISTED,
+    FOREIGN KEY (ClienteID) REFERENCES dbo.Clientes(ClienteID),
+    FOREIGN KEY (ProductoID) REFERENCES dbo.Productos(ProductoID)
+);
+
+
+CREATE TABLE dbo.Contactos (
+    ContactoID INT PRIMARY KEY IDENTITY(1,1),
+    Nombre NVARCHAR(100) NOT NULL,
+    Correo NVARCHAR(150),
+    Telefono NVARCHAR(20),
+    Mensaje NVARCHAR(500),
+    FechaContacto DATE NOT NULL DEFAULT GETDATE()
+);
