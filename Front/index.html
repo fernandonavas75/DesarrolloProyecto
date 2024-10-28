@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta hhhtp-equiv= "X-UA-Compatible"content="IE=edge">
+    <meta content="IE=edge">
     <meta name="viewport" content="width= device-width, initial-scale= 1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
     <link rel="stylesheet" href="css/css.css">
@@ -20,16 +20,16 @@
         </div>
         <nav class="navbar">
             <a href="index.html">Inicio</a>
-            <a href="contacto.html">Contacto</a>
-            <a href="productos.html">Productos</a>
-            <a href="carrito.html" class="menu-item cart-icon"><i class="fas fa-shopping-cart"></i></a>
+            <a href="./public/contacto.html">Contacto</a>
+            <a href="./public/productos.html">Productos</a>
+            <a href="./public/contacto.html" class="menu-item cart-icon"><i class="fas fa-shopping-cart"></i></a>
         </nav>
         
     </div>
 
     <script>
         function toggleMenu() {
-            var navbar = document.querySelector('.navbar');
+            let navbar = document.querySelector('.navbar');
             if (navbar.style.display === 'block') {
                 navbar.style.display = 'none';
             } else {
@@ -66,13 +66,12 @@
                 <h3>Tequila Don Julio Sa De C.V.</h3>
             </div>
         </div>
-        
-        </div>
+
     </section>
     <section class="content about">
         <h2 class="title">Nosotros</h2>
         <p>Alcoholic House con una trayectoria destacada en la industria, ofrecemos a nuestros clientes experiencias únicas a través de nuestros productos de alta calidad. Nuestro compromiso es con la innovación y la satisfacción total, asegurando siempre una selección premium que supera las expectativas.</p>
-        <a href="contacto.html" class="btn">Contactanos</a>
+        <a href="./public/contacto.html" class="btn">Contactanos</a>
     </section>
     
     <section class="content deals">
@@ -116,7 +115,7 @@
                 <p class="price">$30.00</p>
             </div>
         </div>
-        <a href="productos.html" class="btn">Ver todos los productos</a>
+        <a href="./public/productos.html" class="btn">Ver todos los productos</a>
     </section>
     
     <section class="content Contacto">
@@ -148,8 +147,8 @@
                 <h4>Enlaces Rápidos</h4>
                 <ul>
                     <li><a href="index.html">Inicio</a></li>
-                    <li><a href="productos.html">Productos</a></li>
-                    <li><a href="contacto.html">Contacto</a></li>
+                    <li><a href="./public/productos.html">Productos</a></li>
+                    <li><a href="./public/contacto.html">Contacto</a></li>
                 </ul>
             </section>
             <section class="social-media">
