@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Contacto</title>
+    <link rel="stylesheet" href="css/contacto.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+
+</head>
+<body>
+
+    <div class="head">
+        <div class="logo">
+            <a href="index.html">Logo</a> <!-- Asegúrate de que el enlace apunte al archivo de inicio correcto -->
+        </div>
+
+        <div class="menu-icon" onclick="toggleMenu()"> <!-- Icono de menú de hamburguesa -->
+            <i class="fas fa-bars"></i>
+        </div>
+    
+        <nav class="navbar">
+            <a href="index.html">Inicio</a>
+            <a href="contacto.html">Contacto</a>
+            <a href="productos.html">Productos</a>
+            <a href="carrito.html" class="menu-item cart-icon"><i class="fas fa-shopping-cart"></i></a>
+        </nav>
+    </div>
+    
+    <script>
+        function toggleMenu() {
+            var navbar = document.querySelector('.navbar');
+            if (navbar.style.display === 'block') {
+                navbar.style.display = 'none';
+            } else {
+                navbar.style.display = 'block';
+            }
+        }
+        </script>
+        
+
+    <div class="container">
+        <header class="content header">
+            <h2 class="title">Contactanos</h2>
+            <p>
+                ¡Bienvenido a la seccion de contactos!
+                En esta seccion puedes dar tu opinión sobre nuestro servicio. Ademas de comentarnos que productos te gustaria agregar a nuestra empresa. Cualquier comentario es bienvenido!
+            </p>
+            
+        </header>
+        
+        <main>
+            <section class="contact-info">
+                <h2>Contáctanos</h2>
+                <p><strong>Teléfono:</strong> 09690991135</p>
+                <p><strong>Email:</strong> info@tuempresa.com</p>
+                <p><strong>Dirección:</strong> Calle Falsa 123, Ciudad, País</p>
+            </section>
+            
+           <!-- Sección del formulario de contacto -->
+            <section class="contact-form">
+                <form action="destino-formulario.php" method="post">
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" id="nombre" name="nombre" required>
+                    
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                    
+                    <!-- Nuevo campo para el número de celular -->
+                    <label for="celular">Celular:</label>
+                    <input type="tel" id="celular" name="celular" required>
+                    
+                    <label for="mensaje">Mensaje:</label>
+                    <textarea id="mensaje" name="mensaje" required></textarea>
+                    
+                    <button type="submit">Enviar Mensaje</button>
+                </form>
+            </section>
+
+        </main>
+        
+    <footer class="footer">
+        <div class="footer-content">
+            <section class="contact-info">
+                <h4>Contacto</h4>
+                <p>Teléfono: 09690991135</p>
+                <p>Email: info@AlcoholicHouse.com</p>
+            </section>
+            <section class="quick-links">
+                <h4>Enlaces Rápidos</h4>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="productos.html">Productos</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                </ul>
+            </section>
+            <section class="social-media">
+                <h4>Síguenos</h4>
+                <a href="http://facebook.com" target="_blank">Facebook</a>
+                <a href="http://twitter.com" target="_blank">Twitter</a>
+                <a href="http://instagram.com" target="_blank">Instagram</a>
+            </section>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Alcoholic House. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+    
+    </div>
+</body>
+</html>

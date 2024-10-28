@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta hhhtp-equiv= "X-UA-Compatible"content="IE=edge">
+    <meta name="viewport" content="width= device-width, initial-scale= 1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <link rel="stylesheet" href="css/carrito.css">
+
+    <title>Carrito de Compras</title>
+</head>
+<body>
+    <div class="head">
+        <div class="logo">
+            <a href="index.html">Logo</a> <!-- Asume que 'index.html' es tu página de inicio -->
+        </div>
+
+        <div class="menu-icon" onclick="toggleMenu()"> <!-- Icono de menú de hamburguesa -->
+            <i class="fas fa-bars"></i>
+        </div>
+        <nav class="navbar">
+            <a href="index.html">Inicio</a>
+            <a href="/public/productos.html">Contacto</a>
+            <a href="/public/contacto.html">Productos</a>
+            <a href="/public/carrito.html" class="menu-item cart-icon"><i class="fas fa-shopping-cart"></i></a>
+        </nav>
+        
+    </div>
+
+    <h1>Carrito de Compras</h1>
+    <div id="cartContainer"></div>
+    <script src="carrito.js"></script>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <section class="contact-info">
+                <h4>Contacto</h4>
+                <p>Teléfono: 09690991135</p>
+                <p>Email: info@AlcoholicHouse.com</p>
+            </section>
+            <section class="quick-links">
+                <h4>Enlaces Rápidos</h4>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="productos.html">Productos</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                </ul>
+            </section>
+            <section class="social-media">
+                <h4>Síguenos</h4>
+                <a href="http://facebook.com" target="_blank">Facebook</a>
+                <a href="http://twitter.com" target="_blank">Twitter</a>
+                <a href="http://instagram.com" target="_blank">Instagram</a>
+            </section>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Alcoholic House. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+    <script src="carrito.js"></script>
+
+</body>

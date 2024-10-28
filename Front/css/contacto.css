@@ -1,0 +1,287 @@
+body {
+    font-family: 'Tahoma', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background: url('img/contacto-fondo.jpg'); /* Asegúrate de que la ruta sea correcta */
+    background-size: cover; /* Cubre todo el espacio disponible */
+    background-position: center; /* Centra la imagen en la página */
+    background-attachment: fixed; /* Hace que la imagen de fondo no se mueva al desplazar */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    color: #fff; /* Cambia el color de la letra a blanco */
+}
+
+
+.head{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 63px;
+    background-color: #171717;
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+}
+.navbar{
+    display: flex;
+    margin-right: 10px;
+}
+.logo{
+    margin-left: 30px;
+}
+.logo a{
+    text-decoration: none;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 20px;
+}
+.navbar a{
+    display: block;
+    padding: 23px 20px;
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 20px;
+}
+.navbar a:hover{
+    background: #3f3f3f;
+}
+header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.header{
+    height: 80vh !important;
+    background: url(img/) no-repeat center;
+    background-size: cover;
+    
+}
+.header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.5); /* Ajusta la opacidad para oscurecer el fondo */
+    z-index: -1;
+}
+
+.menu-icon {
+    display: none;
+    cursor: pointer;
+    color: #fff;
+    font-size: 30px; /* Tamaño del icono del menú */
+    padding: 20px; /* Espacio alrededor del icono para facilitar la interacción */
+}
+
+/* Estilos básicos para el menú */
+.menu {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.menu-item {
+    cursor: pointer;
+}
+
+/* Estilo para el ícono del carrito */
+.cart-icon {
+    font-size: 24px;  /* Tamaño del ícono */
+}
+
+.navbar a, .navbar .cart-icon {
+    display: block;
+    padding: 23px 20px;
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 20px;
+}
+.cart-icon {
+    font-size: 24px; /* Tamaño del ícono */
+    color: #fff; /* Asegúrate de que el color sea blanco */
+    cursor: pointer;
+}
+
+
+
+@media (max-width: 768px) {
+    .menu-icon {
+        display: block; /* Mostrar el icono de menú en pantallas pequeñas */
+    }
+
+    .navbar {
+        display: none; /* Ocultar la barra de navegación en pantallas pequeñas */
+        flex-direction: column; /* Los enlaces deben estar uno debajo del otro */
+        width: 100%; /* La barra de navegación ocupa el ancho completo */
+        position: absolute;
+        top: 63px; /* Ajusta esto según la altura de tu .head */
+        left: 0;
+        background-color: #171717; /* Fondo para la barra desplegable */
+    }
+
+    .navbar a {
+        text-align: center; /* Centrar texto de los enlaces */
+        padding: 10px; /* Menor padding para cada enlace */
+        border-top: 1px solid #fff; /* Añade un borde para separar los enlaces */
+    }
+
+    .navbar a:hover {
+        background-color: #3f3f3f;
+    }
+}
+
+
+
+.title {
+    /* Tus otras propiedades */
+    color: #fff; /* O cualquier color que contraste con tu fondo */
+    text-shadow: 2px 2px 4px #000000; /* Sombra negra para mayor legibilidad */
+}
+
+.title{
+    margin-bottom: 40px;
+    font-size: 60px;
+    font-weight: 60px;
+    text-transform: uppercase; 
+    color: #fff;
+}
+p{
+    margin-bottom: 40px;
+    font-size: 18px;
+    color: #fff;
+    padding: 0 100px;
+}
+.btn{
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 40px;
+    border: 2px solid #0b0b0b;
+    color: #fff;
+    text-decoration: none;
+    background: #bbb4bd;
+}
+.btn:hover{
+    background: none;
+}
+.btn-home{
+    display: flex;
+}
+.btn-home a{
+    margin: 0 10%;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+    text-align: center; /* Centra todo el texto dentro del contenedor */
+}
+
+.contact-info,
+.contact-form {
+    background: rgba(0, 0, 0, 0.8); /* Fondo negro con algo de transparencia */
+    padding: 40px; /* Aumenta el padding para más espacio */
+    margin-bottom: 40px; /* Aumenta el margen entre secciones */
+    border-radius: 10px; /* Esquinas redondeadas */
+}
+
+.contact-info h2,
+.contact-form form {
+    color: #fff; /* Texto en blanco para ambos */
+}
+
+.contact-form label,
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea,
+.contact-form button[type="submit"] {
+    width: 100%; /* Hace que los elementos del formulario ocupen todo el ancho disponible */
+    margin-bottom: 15px; /* Añade más espacio entre los elementos del formulario */
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form input[type="tel"], /* Asegúrate de incluir el nuevo campo de celular aquí */
+.contact-form textarea {
+    padding: 15px;
+    border: 1px solid #ccc;
+    background: #333;
+    color: #fff;
+    margin: 10px auto 20px; /* Centra los campos en su contenedor */
+    display: block; /* Establece los elementos como bloque para aplicar márgenes automáticos */
+    width: 90%; /* Por ejemplo, ocupar el 90% del contenedor .contact-form */
+    max-width: 500px; /* Un ancho máximo para evitar que los campos sean demasiado largos */
+    border-radius: 5px; /* Bordes redondeados para un mejor aspecto */
+}
+
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+    padding: 15px; /* Aumenta el padding para más espacio */
+    border: 1px solid #ccc; /* Frontera más sutil */
+    background: #333; /* Fondo oscuro para los inputs */
+    color: #fff; /* Texto en blanco para los inputs */
+}
+
+.contact-form button[type="submit"] {
+    background: #0066cc; /* Un color azul para el botón */
+    padding: 15px 20px; /* Más padding para un botón más grande */
+}
+
+.contact-form button[type="submit"]:hover {
+    background: #0057a3; /* Un azul más oscuro para el hover */
+}
+
+/* Pie de página */
+.footer {
+    background-color: #000; /* Fondo negro para el pie de página */
+    padding: 40px 0; /* Aumenta el padding para más espacio */
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-around;
+    padding: 0 10%;
+    align-items: center;
+    flex-wrap: wrap; /* Permite que los elementos se envuelvan en pantallas pequeñas */
+}
+
+.footer-content section {
+    margin: 20px 0; /* Añade margen para separar las secciones */
+}
+
+.footer-content h4 {
+    margin-bottom: 15px;
+}
+
+.footer-content p,
+.footer-content a {
+    color: #fff; /* Texto en blanco */
+}
+
+.footer-content a:hover {
+    text-decoration: underline; /* Subraya los enlaces al pasar el mouse */
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+}
+
+@media (max-width: 768px) {
+    .container,
+    .contact-info,
+    .contact-form {
+        width: 95%; /* Aumenta el ancho en dispositivos móviles */
+    }
+    
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+    }
+}

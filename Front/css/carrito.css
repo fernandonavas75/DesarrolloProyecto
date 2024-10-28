@@ -1,0 +1,99 @@
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #f4f4f4;
+}
+
+button {
+    padding: 5px 10px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/*Footer*/
+.footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-around;
+    padding: 0 10%;
+    align-items: start;
+}
+
+.footer-content section {
+    margin-right: 20px;
+}
+
+.footer-content h4 {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+}
+
+.footer-content p, .footer-content a {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    text-decoration: none;
+    color: #fff;
+}
+
+.footer-content ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-content ul li a:hover {
+    text-decoration: underline;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+}
+
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-content section {
+        margin-bottom: 20px;
+    }
+}
+
+
+.price{
+    background: url(img/costos.jpg) no-repeat center;
+    background-attachment:fixed;
+    background-size: cover;
+    text-align: center;
+}
+.contacto{
+    padding-top: 20px;
+    background: #171717;
+    padding-bottom: 0 ;
+
+}
+
+
+

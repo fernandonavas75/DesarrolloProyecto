@@ -1,0 +1,460 @@
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+}
+body{
+    text-align: center;
+    font-family: sans-serif;
+}
+
+/* Estilos básicos para el menú */
+.menu {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.menu-item {
+    cursor: pointer;
+}
+
+/* Estilo para el ícono del carrito */
+.cart-icon {
+    font-size: 24px;  /* Tamaño del ícono */
+}
+
+.navbar a, .navbar .cart-icon {
+    display: block;
+    padding: 23px 20px;
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 20px;
+}
+.cart-icon {
+    font-size: 24px; /* Tamaño del ícono */
+    color: #fff; /* Asegúrate de que el color sea blanco */
+    cursor: pointer;
+}
+
+
+
+.head{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 63px;
+    background-color: #171717;
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+}
+.navbar{
+    display: flex;
+    margin-right: 10px;
+}
+.logo{
+    margin-left: 30px;
+}
+.logo a{
+    text-decoration: none;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 20px;
+}
+.navbar a{
+    display: block;
+    padding: 23px 20px;
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 20px;
+}
+.navbar a:hover{
+    background: #3f3f3f;
+}
+header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.header{
+    height: 80vh !important;
+    background: url(img/fondo.jpg) no-repeat center;
+    background-size: cover;
+    
+}
+.header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.5); /* Ajusta la opacidad para oscurecer el fondo */
+    z-index: -1;
+}
+
+.menu-icon {
+    display: none;
+    cursor: pointer;
+    color: #fff;
+    font-size: 30px; /* Tamaño del icono del menú */
+    padding: 20px; /* Espacio alrededor del icono para facilitar la interacción */
+}
+
+@media (max-width: 768px) {
+    .menu-icon {
+        display: block; /* Mostrar el icono de menú en pantallas pequeñas */
+    }
+
+    .navbar {
+        display: none; /* Ocultar la barra de navegación en pantallas pequeñas */
+        flex-direction: column; /* Los enlaces deben estar uno debajo del otro */
+        width: 100%; /* La barra de navegación ocupa el ancho completo */
+        position: absolute;
+        top: 63px; /* Ajusta esto según la altura de tu .head */
+        left: 0;
+        background-color: #171717; /* Fondo para la barra desplegable */
+    }
+
+    .navbar a {
+        text-align: center; /* Centrar texto de los enlaces */
+        padding: 10px; /* Menor padding para cada enlace */
+        border-top: 1px solid #fff; /* Añade un borde para separar los enlaces */
+    }
+
+    .navbar a:hover {
+        background-color: #3f3f3f;
+    }
+}
+
+
+
+
+
+.title {
+    /* Tus otras propiedades */
+    color: #fff; /* O cualquier color que contraste con tu fondo */
+    text-shadow: 2px 2px 4px #000000; /* Sombra negra para mayor legibilidad */
+}.title {
+    margin-bottom: 40px; /* Espaciado debajo del título */
+    font-size: 100px; /* Tamaño de la fuente del título */
+    font-weight: bold; /* Peso de la fuente */
+    text-transform: uppercase; /* Transformación de texto a mayúsculas */
+    color: #fff; /* Color de la fuente */
+    text-shadow: 2px 2px 4px #000000; /* Sombra de texto para mejorar la legibilidad */
+    line-height: 1.2; /* Espaciado de línea */
+}
+
+
+p{
+    margin-bottom: 40px;
+    font-size: 18px;
+    color: #fff;
+    padding: 0 100px;
+}
+.btn{
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 40px;
+    border: 2px solid #0b0b0b;
+    color: #fff;
+    text-decoration: none;
+    background: #bbb4bd;
+}
+.btn:hover{
+    background: none;
+}
+.btn-home{
+    display: flex;
+}
+.btn-home a{
+    margin: 0 10%;
+}
+.content{
+    height: 50vph;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.sau{
+    padding: 30px;
+    background: #1f1d1d;
+}
+.box-container{
+    display: flex;
+    justify-content: center;
+    flex-wrap:wrap ;
+    text-align: center;
+}
+.box-container .box{
+    height: 15rem;
+    width: 15rem;
+    background: #101010;
+    text-align: center;
+    border-radius: 1rem;
+    box-shadow: 0.3 5rem rgb (0 ,0, 0, .5);
+    margin: 2rem;
+}
+.box-container box i{
+    height: 3rem;
+    width: 3rem;
+    line-height: 3rem;
+    text-align: center;
+    border-radius: 50%;
+    color: #fff;
+    background: #9c27b0;
+    font-size: 2rem;
+    margin:1rem 0;
+}
+.box-container .box h3{
+    font-size: 20px;
+    color:#9c27b0;
+}
+
+.box-container .box p{
+    padding: 0 15%;
+    font-size: 60px;
+
+}
+.box img {
+    width: 100%; /* Esto asegura que la imagen ocupe todo el ancho de .box */
+    height: auto; /* Esto mantiene la proporción de la imagen */
+    max-width: 200px; /* Define un ancho máximo para todas las imágenes */
+    max-height: 150px; /* Define una altura máxima */
+    object-fit: cover; /* Esto recortará la imagen para que se ajuste perfectamente */
+    min-height: 250px; /* Esto asegura que el div no sea más pequeño que 250px */
+    max-width: 100%;
+    height: auto;
+}
+
+.box img {
+    max-width: 100%;
+    height: auto;
+    /* Otras reglas de estilo que necesites */
+}
+
+.about{
+    background:#171717;
+}
+
+/*Nostros*/
+.content.about {
+    text-align: center; /* Centra el texto para un diseño limpio y moderno */
+    padding: 50px 20px; /* Añade algo de espacio alrededor del contenido */
+    background-color: #0a0505; /* Un fondo oscuro para el contraste */
+    color: #fff; /* Texto en blanco para leer fácilmente */
+}
+
+.title {
+    font-size: 2.5rem; /* Tamaño más grande para el título */
+    margin-bottom: 1rem; /* Espacio debajo del título */
+    color: #f8f8f8; /* Un blanco ligeramente apagado para suavizar */
+    text-transform: uppercase; /* Estilo en mayúsculas para más impacto */
+}
+
+.content.about p {
+    margin-bottom: 2rem; /* Espacio adicional debajo del párrafo */
+    font-size: 1.1rem; /* Un tamaño de fuente ligeramente más grande para mejorar la legibilidad */
+    max-width: 800px; /* Máximo ancho del texto para una lectura cómoda */
+    margin-left: auto; /* Margenes automáticos para centrar el bloque de texto */
+    margin-right: auto;
+}
+
+.btn {
+    background-color: #a99ebd; /* Color llamativo para el botón */
+    color: #fff;
+    padding: 10px 30px; /* Espaciado interno para que el botón sea más grande */    
+    font-weight: bold; /* Fuente en negrita para que destaque */
+    transition: background-color 0.3s ease; /* Transición suave para efectos de hover */
+}
+
+.btn:hover {
+    background-color: #310e76; /* Cambio de color al pasar el ratón por encima */
+    text-decoration: none; /* Remueve el subrayado al pasar el ratón */
+}
+
+/*Ofertas que pueden interesarte*/
+.content.deals {
+    background-color: #090606; /* Un fondo claro para la sección */
+    padding: 40px;
+    text-align: center;
+}
+
+.title {
+    color: #e9e3e3; /* Un color oscuro para el título */
+    margin-bottom: 20px;
+}
+
+.deals-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20px; /* Espacio entre los cuadros */
+}
+
+.deal {
+    flex-basis: calc(33.333% - 20px); /* Tres por fila, ajustando el espacio entre ellos */
+    border: 1px solid #ddd; /* Un borde sutil */
+    padding: 15px;
+    background-color: #fff; /* Fondo blanco para cada cuadro */
+}
+
+.deal img {
+    max-width: 100%;
+    height: auto;
+}
+
+.deal h3 {
+    margin: 10px 0;
+}
+
+.description {
+    color: #666;
+    font-size: 0.9em;
+}
+
+.price {
+    color: #009688;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 20px;
+    /* Estilos adicionales para el botón si es necesario */
+}
+
+@media (max-width: 768px) {
+    .deal {
+        flex-basis: calc(50% - 20px); /* Dos por fila en pantallas más pequeñas */
+    }
+}
+
+@media (max-width: 480px) {
+    .deal {
+        flex-basis: 100%; /* Una sola columna en pantallas muy pequeñas */
+    }
+}
+
+/*Contacto*/
+
+.content.Contacto {
+    background-color: #1e1919; /* Un fondo claro para resaltar la sección */
+    padding: 40px;
+    text-align: center;
+}
+
+.title {
+    margin-bottom: 1rem;
+    color: #e4dede; /* Un color oscuro para el título */
+}
+
+.telefono, .email {
+    display: block; /* Hace que cada enlace de contacto aparezca en su propia línea */
+    margin: 10px 0;
+    color: #0066cc; /* Un color destacado para los enlaces */
+    text-decoration: none; /* Elimina el subrayado */
+    font-weight: bold; /* Hace la información de contacto más visible */
+}
+.map-container {
+    text-align: center; /* Alinea el contenido del contenedor al centro */
+    margin-top: 20px;
+    position: relative; /* Posicionamiento relativo para el contenedor */
+    overflow: hidden; /* Oculta cualquier contenido que desborde el tamaño del contenedor */
+}
+
+.map-container iframe {
+    width: 300%; /* El ancho debería ser 100% del contenedor para adaptabilidad */
+    max-width: 300px; /* Establece un ancho máximo para el mapa */
+    height: 300px; /* Altura fija para el mapa */
+    border: 3px solid #333;
+    border-radius: 10px;
+    margin: 0 auto; /* Margen automático para centrar horizontalmente el mapa */
+    display: block; /* Los iframes son inline por defecto, cámbialo a block para aplicar los márgenes */
+}
+
+@media (max-width: 768px) {
+    .map-container iframe {
+        height: 150px; /* Ajusta la altura como sea necesario para dispositivos móviles */
+        max-width: 100%; /* Hace que el mapa tenga el ancho completo en dispositivos más pequeños */
+    }
+}
+
+/*Footer*/
+.footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-around;
+    padding: 0 10%;
+    align-items: start;
+}
+
+.footer-content section {
+    margin-right: 20px;
+}
+
+.footer-content h4 {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+}
+
+.footer-content p, .footer-content a {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    text-decoration: none;
+    color: #fff;
+}
+
+.footer-content ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-content ul li a:hover {
+    text-decoration: underline;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+}
+
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-content section {
+        margin-bottom: 20px;
+    }
+}
+
+
+.price{
+    background: url(img/costos.jpg) no-repeat center;
+    background-attachment:fixed;
+    background-size: cover;
+    text-align: center;
+}
+.contacto{
+    padding-top: 20px;
+    background: #171717;
+    padding-bottom: 0 ;
+
+}
+
+
+
