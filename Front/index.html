@@ -1,51 +1,170 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Página de licores</title>
-    <link rel="stylesheet" href="/css/styles.css">
+    <meta hhhtp-equiv= "X-UA-Compatible"content="IE=edge">
+    <meta name="viewport" content="width= device-width, initial-scale= 1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <link rel="stylesheet" href="css/css.css">
+
+    <title>Alcoholic House</title>
 </head>
 <body>
-<header>
-    <nav>
-        <div class="logo">Alcolicos Anonimos</div>
-        <ul class="nav-links">
-            <li><a href="#inicio">Inicio</a></li>
-            <li><a href="#servicios">Productos</a></li>
-            <li><a href="#nosotros">Login</a></li>
-            <li><a href="#contacto">Contacto</a></li>
-        </ul>
-    </nav>
-</header>
-
-<section id="inicio" class="hero">
-    <div class="hero-content">
-        <h1>Primer titulo</h1>
-        <p>Ofrecemos los mejores licores del mundo a un mercado nacional y enconimico.</p>
-        <a href="#servicios" class="btn">Conoce más</a>
-    </div>
-</section>
-
-<section id="servicios" class="section">
-    <h2>Nuestros Servicios</h2>
-    <div class="services">
-        <div class="service">
-            <h3>Nuestros productos</h3>
-            <p>lorem </p>
+    <div class="head">
+        <div class="logo">
+            <a href="index.html">Logo</a> <!-- Asume que 'index.html' es tu página de inicio -->
         </div>
-        <div class="service">
-            <h3>Consultoría Tecnológica</h3>
-            <p>Te ayudamos a optimizar tus procesos con tecnología de punta.</p>
+
+        <div class="menu-icon" onclick="toggleMenu()"> <!-- Icono de menú de hamburguesa -->
+            <i class="fas fa-bars"></i>
         </div>
+        <nav class="navbar">
+            <a href="index.html">Inicio</a>
+            <a href="contacto.html">Contacto</a>
+            <a href="productos.html">Productos</a>
+            <a href="carrito.html" class="menu-item cart-icon"><i class="fas fa-shopping-cart"></i></a>
+        </nav>
+        
     </div>
-</section>
 
-<footer>
-    <p>&copy; 2024 Fernando Navas. Todos los derechos reservados.</p>
-</footer>
+    <script>
+        function toggleMenu() {
+            var navbar = document.querySelector('.navbar');
+            if (navbar.style.display === 'block') {
+                navbar.style.display = 'none';
+            } else {
+                navbar.style.display = 'block';
+            }
+        }
+        </script>
+        
+    <header class="content header">
+        <h2 class="title">Alcoholic House</h2>
+        <p>
+            ¡Bienvenido a Alcoholic House, tu destino exclusivo donde la calidad y la variedad se encuentran en cada gota! Adéntrate en nuestra selección curada de licores, que ha sido meticulosamente seleccionada para satisfacer incluso al paladar más exigente. Desde la riqueza y complejidad de nuestros vinos escogidos a mano, perfectos para esos momentos que piden un brindis.
 
-<script src="script.js"></script>
+        </p>
+    </header>
+
+    <section class="content sau">
+        <h2 class="title">Productos Destacados</h2>
+        <p>
+            No te pierdas nuestras ofertas especiales de la semana. ¡Descuentos en una selección de licores premium!
+            Los mas cotizados!
+        </p>
+        <div class="box-container">
+            <div class="box">
+                <img src="img/blue.jpg" alt="Descripción imagen 1">
+                <h3>Johnnie Walker Blue Label</h3>
+            </div>
+            <div class="box">
+                <img src="img/jagermeister.jpg" alt="Descripción imagen 2">
+                <h3>Jägermeister</h3>
+            </div>
+            <div class="box">
+                <img src="img/tequila.jpg" alt="Descripción imagen 3">
+                <h3>Tequila Don Julio Sa De C.V.</h3>
+            </div>
+        </div>
+        
+        </div>
+    </section>
+    <section class="content about">
+        <h2 class="title">Nosotros</h2>
+        <p>Alcoholic House con una trayectoria destacada en la industria, ofrecemos a nuestros clientes experiencias únicas a través de nuestros productos de alta calidad. Nuestro compromiso es con la innovación y la satisfacción total, asegurando siempre una selección premium que supera las expectativas.</p>
+        <a href="contacto.html" class="btn">Contactanos</a>
+    </section>
+    
+    <section class="content deals">
+        <h2 class="title">Ofertas que pueden interesarte</h2>
+        <p>Descubre nuestras promociones especiales y encuentra tu próxima adquisición a un precio inigualable. ¡No dejes pasar estas oportunidades!</p>
+        <div class="deals-container">
+            <div class="deal">
+                <img src="img/Green-Mate-750-ml.jpg" alt="Descripción imagen 1">
+                <h3>Green Mate 50 ml</h3>
+                <p class="description">Green Mate presentación 750ml contiene 27° de alcohol. Este licor de hierbas es ligeramente aromático, con matices a anís agradables e intensos.</p>
+                <p class="price">$12.00</p>
+            </div>
+            <div class="deal">
+                <img src="img/Corona.jpg" alt="Descripción imagen 1">
+                <h3>Six Pack corona</h3>
+                <p class="description">Cervezas importadas Premium de diversos países y estilos con alto porcentaje de alcohol en sus filas, por encima de los 7,5% de volumen de alcohol.</p>
+                <p class="price">$10.99</p>
+            </div>
+            <div class="deal">
+                <img src="img/Gran-malo.jpg" alt="Descripción imagen 1">
+                <h3>Gran Malo</h3>
+                <p class="description">Gran Malo Spicy Tamarindo Licor de Tequila 750ml ofrece una explosión de sabor única que combina la riqueza del tequila con el picante del tamarindo, creando una experiencia sensorial cautivadora.</p>
+                <p class="price">$62.00</p>
+            </div>
+            <div class="deal">
+                <img src="img/jackhoney.jpg" alt="Descripción imagen 1">
+                <h3>Jack Daniels Honey</h3>
+                <p class="description">Una mezcla de Jack Daniel's Tennessee Whiskey con un único licor de miel, de producción propia, para un sabor incomparable e inconfundiblemente Jack. Con tonos de miel y una terminación naturalmente suave.</p>
+                <p class="price">$28.00</p>
+            </div>
+            <div class="deal">
+                <img src="img/RonAbuelo.jpg" alt="Descripción imagen 1">
+                <h3>Ron Abuelo 750ml</h3>
+                <p class="description">El Ron Abuelo Añejo es un derivado de la fermentación de mieles de caña, en su añejamiento y elaboración se utilizan los procedimientos técnicos más modernos y la experiencia de una larga tradición ronera.</p>
+                <p class="price">$13.00</p>
+            </div>
+            <div class="deal">
+                <img src="img/antioqueno-real-750ml.jpg" alt="Descripción imagen 1">
+                <h3>Antioqueño Real 750ml</h3>
+                <p class="description">Una bebida espirituosa de inigualable placer sensorial y única en su categoría Premium. Con una apariencia y color natural, de matices grises perla que se combinan con un blanco ambarino tenue, haciéndolo único frente a cualquier otro aguardiente en su categoría.</p>
+                <p class="price">$30.00</p>
+            </div>
+        </div>
+        <a href="productos.html" class="btn">Ver todos los productos</a>
+    </section>
+    
+    <section class="content Contacto">
+        <h2 class="title">Contacto</h2>
+        <p>Llámanos al: <a href="tel:09690991135" class="telefono">09690991135</a> o escríbenos a: <a href="mailto:info@tuempresa.com" class="email">info@AlcoholicHouse.com</a></p>
+        <div class="map-container">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3901.8308612855864!2d-77.03522488518694!3d-12.08729749143886!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9105c8f87a758ef9%3A0x2aa7e3412f8dd30!2sAv.%20Alfredo%20Benavides%201555%2C%20Miraflores%2015048!5e0!3m2!1sen!2spe!4v1580934647867!5m2!1sen!2spe"
+                width="600"
+                height="450"
+                frameborder="0"
+                style="border:0;"
+                allowfullscreen=""
+                aria-hidden="false"
+                tabindex="0"
+                alt="Ubicación de nuestra empresa en Google Maps">
+            </iframe>
+        </div>
+    </section>
+    
+    <footer class="footer">
+        <div class="footer-content">
+            <section class="contact-info">
+                <h4>Contacto</h4>
+                <p>Teléfono: 09690991135</p>
+                <p>Email: info@AlcoholicHouse.com</p>
+            </section>
+            <section class="quick-links">
+                <h4>Enlaces Rápidos</h4>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="productos.html">Productos</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                </ul>
+            </section>
+            <section class="social-media">
+                <h4>Síguenos</h4>
+                <a href="http://facebook.com" target="_blank">Facebook</a>
+                <a href="http://twitter.com" target="_blank">Twitter</a>
+                <a href="http://instagram.com" target="_blank">Instagram</a>
+            </section>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Alcoholic House. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="main.js"></script> <!-- Enlace al archivo JavaScript externo -->
+
 </body>
 </html>
